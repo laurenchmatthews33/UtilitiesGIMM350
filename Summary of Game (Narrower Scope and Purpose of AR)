@@ -1,0 +1,7 @@
+//I hace chosen to narrow the scope of my game to AR in stead of VR. Initially, I had wanted to created a life simulation game
+//with a horror element, but realized that would be too difficult in the given time and with the limited resources. I have decided
+//instead to create a choose your own adventure game where you help an old man living alone on an island. Much like in the IOS game
+//"Lifeline" you will be the only person the old man can reach and you will have to help him make decisions on how to approach the 
+//threat. The app will begin in 2d with narrative and will switch to 3d to play out consequences of bigger descisions - like the mosnter
+//moving further up the island. The old man will have no idea what is on the island and you wont be able to tell him, only help him
+//as much as you can. 
