@@ -136,3 +136,5 @@ class RenFairePerson : Person
     }
 
 }
+
+//Delegate pattern allows for easier management of an object that behaves in at least two different ways - i.e.Point2D 
