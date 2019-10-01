@@ -1,0 +1,78 @@
+using System;
+//Learning to manage data collections
+
+public class Class1
+{
+	public Class1()
+	{
+        //collections and arrays 
+        var names = new List<String> { "lauren", "Stormy", "Jersey" };
+        Console.WriteLine();
+        names.Add("Maria");
+        names.Add("Bill");
+        names.Remove ("lauren");
+
+        foreach (var name in names)
+
+            {
+            Console.WriteLine($"Hell0{name.ToUpper()}!");
+            }
+
+        Console.WriteLine($"My name is {names[0]}.");
+        Console.WriteLine($"I've added {names[2]} and {names[3]} to the list.");
+        Console.WriteLine($"The list has {names.Count} people in it");
+        //When you follow a string with the $ ypu can embed C# code in the string declaration. Here ToUpper
+        //converts the name to capital letters 
+
+        //To find elements in these larger collections, you need to search the list for different items. 
+        //The IndexOf method searches for an item and returns the index of the item. 
+        var index = names.IndexOf("Felipe");
+        if (index != -1)
+            Console.WriteLine($"The name {names[index]} is at index {index}");
+
+       
+        var notFound = names.IndexOf("Not Found");
+        Console.WriteLine($"When an item is not found, IndexOf returns {notFound}");
+
+        //The items in your list can be sorted as well. 
+        //The Sort method sorts all the items in the list in their normal order (alphabetically in the case of strings).
+
+        names.Sort();
+        foreach (var name in names)
+        {
+            Console.WriteLine($"Hello {name.ToUpper()}!");
+        }
+
+
+        //NUMBERS 
+        var fibonacciNumbers = new List<int> { 1, 1 };
+        //That creates a list of integers, and sets the first two integers to the value 1. 
+        //The Fibonacci Sequence, a sequence of numbers, starts with two 1s. 
+        //Each next Fibonacci number is found by taking the sum of the previous two numbers.
+
+        var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
+        var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
+
+        fibonacciNumbers.Add(previous + previous2);
+
+        foreach (var item in fibonacciNumbers)
+            Console.WriteLine(item);
+
+        var fibonacciNumbers = new List<int> { 1, 1 };
+
+        while (fibonacciNumbers.Count < 20)
+        {
+            var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
+            var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
+
+            fibonacciNumbers.Add(previous + previous2);
+        }
+        foreach (var item in fibonacciNumbers)
+            Console.WriteLine(item);
+
+        //With each iteration of the loop, you're taking the last two integers in the list, 
+        //summing them, and adding that value to the list. 
+        //The loop repeats until you've added 20 items to the list.
+
+    }
+}
